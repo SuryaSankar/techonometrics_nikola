@@ -1,0 +1,7 @@
+*.pid
+*.sqlite
+jupyterhub_cookie_secret
+.ipynb_checkpoints/
+__pycache__/
+cache/
+.doit.db
