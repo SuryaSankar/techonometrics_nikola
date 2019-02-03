@@ -1,3 +1,5 @@
+There are lots of different ways to classify startups.
+
 From 2010 till 2015, disruption of large unorganized offline markets by online platforms became the defining trend of the startup world. Uber was of course the poster child of this phenomenon.
 
 The first question to be asked is "Are you selling a commodity"
