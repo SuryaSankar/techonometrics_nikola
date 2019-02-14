@@ -3,18 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Can all offline markets be disrupted by online startups | Techonometrics</title>
+<title>Some free do-it-yourself solutions for business intelligence dashboards - Redash, Metabase &amp; Jupyter notebooks | Techonometrics</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://techonometrics.com/posts/can-all-offline-markets-be-disrupted-by-online-startups/">
+<link rel="canonical" href="https://techonometrics.com/posts/free-do-it-yourself-business-intelligence-redash-metabase-jupyter/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Surya Sankar">
+<link rel="prev" href="../can-all-offline-markets-be-disrupted-by-online-startups/" title="Can all offline markets be disrupted by online startups" type="text/html">
 <meta property="og:site_name" content="Techonometrics">
-<meta property="og:title" content="Can all offline markets be disrupted by online startups">
-<meta property="og:url" content="https://techonometrics.com/posts/can-all-offline-markets-be-disrupted-by-online-startups/">
-<meta property="og:description" content="Amazon">
+<meta property="og:title" content="Some free do-it-yourself solutions for business intelligence dashboard">
+<meta property="og:url" content="https://techonometrics.com/posts/free-do-it-yourself-business-intelligence-redash-metabase-jupyter/">
+<meta property="og:description" content="Anyone who is managing a business/product knows the importance of a business intelligence dashboard. There are a host of proprietory paid tools like Tableau, Qlik etc which dominate this segment. But ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2019-01-21T12:20:05Z">
 </head>
@@ -73,7 +74,7 @@
         <!--Body content-->
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Can all offline markets be disrupted by online startups</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Some free do-it-yourself solutions for business intelligence dashboards - Redash, Metabase &amp; Jupyter notebooks</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -95,9 +96,18 @@
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>Amazon</p>
+    <div>
+<p>Anyone who is managing a business/product knows the importance of a business intelligence dashboard. There are a host of proprietory paid tools like Tableau, Qlik etc which dominate this segment. But these are typically too expensive and an overkill for small startups/teams. So we will explore some simple, free to use, open source alternatives in this post</p>
+<h3>Setting up the data source</h3>
+<p>The first step is to set up a datasource from which we can query our business data. The preferred approach is to set up a data warehouse using a product specifically designed for running analytical queries. <strong>Amazon Redshift</strong> is the most recommended solution for a data warehouse since it is specifically designed to be able to handle large long running queries whereas the traditional RDBMS systems like Postgres &amp; MySQL are optimized for shorter, but more frequent query loads.</p>
+<p>But Redshift is best suited for those cases where the data volume is too large and a standard relational db proves to be inefficient in running the queries on time. Setting up Redshift is also not trivial. There are good tutorials available online, like this one for example - https://blog.panoply.io/how-to-move-your-mysql-to-amazon-redshift. But our work is not done with the initial setup. We also need to have a way of continuously keeping the data warehouse uptodate with the data accumulating in our production database. You will want this data to be as realtime as possible. After all we are going to need visualizations which keep up uptodate about the number of orders which are being placed at any given minute. If the data warehouse lags the production db by a few hours, we cannot get such visualizations.</p>
+</div>
     </div>
-    <aside class="postpromonav"><nav></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../can-all-offline-markets-be-disrupted-by-online-startups/" rel="prev" title="Can all offline markets be disrupted by online startups">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
         
 

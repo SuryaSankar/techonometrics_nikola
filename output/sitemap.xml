@@ -7,15 +7,15 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://techonometrics.com/</loc>
-  <lastmod>2019-01-21T21:49:00Z</lastmod>
+  <lastmod>2019-02-14T10:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://techonometrics.com/2019/</loc>
-  <lastmod>2019-01-21T21:49:00Z</lastmod>
+  <lastmod>2019-02-14T10:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://techonometrics.com/archive.html</loc>
-  <lastmod>2019-01-21T21:49:00Z</lastmod>
+  <lastmod>2019-02-14T13:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://techonometrics.com/categories/</loc>
@@ -30,7 +30,15 @@
   <lastmod>2019-01-21T20:30:00Z</lastmod>
  </url>
  <url>
+  <loc>https://techonometrics.com/pages/about-this-site/</loc>
+  <lastmod>2019-02-12T06:38:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://techonometrics.com/posts/can-all-offline-markets-be-disrupted-by-online-startups/</loc>
-  <lastmod>2019-01-21T21:49:00Z</lastmod>
+  <lastmod>2019-02-14T10:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://techonometrics.com/posts/free-do-it-yourself-business-intelligence-redash-metabase-jupyter/</loc>
+  <lastmod>2019-02-12T06:38:00Z</lastmod>
  </url>
 </urlset>
