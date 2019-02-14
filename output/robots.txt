@@ -1,4 +1,0 @@
-Sitemap: https://techonometrics.com/sitemapindex.xml
-
-User-Agent: *
-Host: techonometrics.com

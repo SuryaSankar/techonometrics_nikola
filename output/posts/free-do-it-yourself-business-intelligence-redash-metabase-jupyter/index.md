@@ -1,8 +1,0 @@
-Anyone who is managing a business/product knows the importance of a business intelligence dashboard. There are a host of proprietory paid tools like Tableau, Qlik etc which dominate this segment. But these are typically too expensive and an overkill for small startups/teams. So we will explore some simple, free to use, open source alternatives in this post
-
-## Setting up the data source
-
-The first step is to set up a datasource from which we can query our business data. The preferred approach is to set up a data warehouse using a product specifically designed for running analytical queries. **Amazon Redshift** is the most recommended solution for a data warehouse since it is specifically designed to be able to handle large long running queries whereas the traditional RDBMS systems like Postgres & MySQL are optimized for shorter, but more frequent query loads.
-
-But Redshift is best suited for those cases where the data volume is too large and a standard relational db proves to be inefficient in running the queries on time. Setting up Redshift is also not trivial. There are good tutorials available online, like this one for example - https://blog.panoply.io/how-to-move-your-mysql-to-amazon-redshift. But our work is not done with the initial setup. We also need to have a way of continuously keeping the data warehouse uptodate with the data accumulating in our production database. You will want this data to be as realtime as possible. After all we are going to need visualizations which keep up uptodate about the number of orders which are being placed at any given minute. If the data warehouse lags the production db by a few hours, we cannot get such visualizations.
-
