@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Surya Sankar"  # (translatable)
-BLOG_TITLE = "Techonometrics"  # (translatable)
+BLOG_TITLE = "Techonometrics Blog"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://techonometrics.com/"
@@ -25,7 +25,7 @@ SITE_URL = "https://techonometrics.com/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://techonometrics.com/"
 BLOG_EMAIL = "suryashankar.m@gmail.com"
-BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
+BLOG_DESCRIPTION = "A blog for product managers and startup owners"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -136,9 +136,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("/about-this-site/", "About"),
     ),
 }
 
@@ -150,7 +148,7 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootblog4"
+THEME = "hemingway"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.
@@ -218,12 +216,14 @@ POSTS = (
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/*.ipynb", "posts", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
+    ("pages/*.ipynb", "pages", "page.tmpl")
 )
 
 
@@ -895,7 +895,8 @@ IMAGE_FOLDERS = {'images': 'images'}
 # }}                            A literal } (U+007D RIGHT CURLY BRACKET)
 
 # 'Read more...' for the index page, if INDEX_TEASERS is True (translatable)
-INDEX_READ_MORE_LINK = '<p class="more"><a href="{link}">{read_more}…</a></p>'
+# INDEX_READ_MORE_LINK = '<p class="more"><a href="{link}">{read_more}…</a></p>'
+INDEX_READ_MORE_LINK = '<a class="button is-link" href="{link}" style="height:28px"> {read_more} <span class="icon is-small"> <i class="fa fa-angle-double-right"></i></span></a>'
 # 'Read more...' for the feeds, if FEED_TEASERS is True (translatable)
 FEED_READ_MORE_LINK = '<p><a href="{link}">{read_more}…</a> ({min_remaining_read})</p>'
 
@@ -1055,7 +1056,14 @@ PRETTY_URLS = True
 # """
 
 # Do you want to customize the nbconversion of your IPython notebook?
-# IPYNB_CONFIG = {}
+IPYNB_CONFIG = {
+  "TemplateExporter": {
+    "exclude_input": True,
+    "exclude_input_prompt": True,
+    "exclude_output_prompt": True,
+    "template_file": "hide_code.tpl"
+  },
+}
 # With the following example configuration you can use a custom jinja template
 # called `toggle.tpl` which has to be located in your site/blog main folder:
 # IPYNB_CONFIG = {'Exporter':{'template_file': 'toggle'}}
